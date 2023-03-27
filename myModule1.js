@@ -6,3 +6,4 @@ module.exports.counterStep = function () {
 module.exports.displayCounter = function () {
  console.log('Counter is', counter)
 }
+
