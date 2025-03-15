@@ -22,9 +22,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__003__Step___" target="_self">Step 3</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__004__Step___" target="_self">Step 4</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__005__Step___" target="_self">Step 5</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__005__Step___" target="_self">Step 5</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__006__Step___" target="_self">Step 6</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__007__Step___" target="_self">Step 7</a>
@@ -44,9 +46,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__012__Step___" target="_self">Step 13</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__013__Step___" target="_self">Step 14</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__014__Step___" target="_self">Step 15</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__014__Step___" target="_self">Step 15</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__015__Step___" target="_self">Step 16</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__016__Step___" target="_self">Step 17</a>
@@ -66,9 +70,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__021__Step___" target="_self">Step 23</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__022__Step___" target="_self">Step 24</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__023__Step___" target="_self">Step 25</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__023__Step___" target="_self">Step 25</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__024__Step___" target="_self">Step 26</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__025__Step___" target="_self">Step 27</a>
@@ -88,9 +94,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__031__Step___" target="_self">Step 33</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__032__Step___" target="_self">Step 34</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__033__Step___" target="_self">Step 35</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__033__Step___" target="_self">Step 35</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__034__Step___" target="_self">Step 36</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__035__Step___" target="_self">Step 37</a>
@@ -110,9 +118,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__041__Step___" target="_self">Step 43</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__042__Step___" target="_self">Step 44</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__043__Step___" target="_self">Step 45</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__043__Step___" target="_self">Step 45</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__044__Step___" target="_self">Step 46</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__045__Step___" target="_self">Step 47</a>
@@ -132,9 +142,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__051__Step___" target="_self">Step 53</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__052__Step___" target="_self">Step 54</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__053__Step___" target="_self">Step 55</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__053__Step___" target="_self">Step 55</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__054__Step___" target="_self">Step 56</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__055__Step___" target="_self">Step 57</a>
@@ -154,9 +166,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__061__Step___" target="_self">Step 63</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__062__Step___" target="_self">Step 64</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__063__Step___" target="_self">Step 65</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__063__Step___" target="_self">Step 65</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__064__Step___" target="_self">Step 66</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__065__Step___" target="_self">Step 67</a>
@@ -176,9 +190,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__071__Step___" target="_self">Step 73</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__072__Step___" target="_self">Step 74</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__073__Step___" target="_self">Step 75</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__073__Step___" target="_self">Step 75</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__074__Step___" target="_self">Step 76</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__075__Step___" target="_self">Step 77</a>
@@ -198,9 +214,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__081__Step___" target="_self">Step 83</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__082__Step___" target="_self">Step 84</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__083__Step___" target="_self">Step 85</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__083__Step___" target="_self">Step 85</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__084__Step___" target="_self">Step 86</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__085__Step___" target="_self">Step 87</a>
@@ -220,9 +238,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__091__Step___" target="_self">Step 93</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__092__Step___" target="_self">Step 94</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__093__Step___" target="_self">Step 95</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__093__Step___" target="_self">Step 95</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__094__Step___" target="_self">Step 96</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__095__Step___" target="_self">Step 97</a>
@@ -242,9 +262,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__101__Step___" target="_self">Step 103</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__102__Step___" target="_self">Step 104</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__103__Step___" target="_self">Step 105</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__103__Step___" target="_self">Step 105</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__104__Step___" target="_self">Step 106</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__105__Step___" target="_self">Step 107</a>
@@ -264,9 +286,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__111__Step___" target="_self">Step 113</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__112__Step___" target="_self">Step 114</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__113__Step___" target="_self">Step 115</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__113__Step___" target="_self">Step 115</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__114__Step___" target="_self">Step 116</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__115__Step___" target="_self">Step 117</a>
@@ -286,9 +310,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__121__Step___" target="_self">Step 123</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__122__Step___" target="_self">Step 124</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__123__Step___" target="_self">Step 125</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__123__Step___" target="_self">Step 125</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__124__Step___" target="_self">Step 126</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__125__Step___" target="_self">Step 127</a>
@@ -308,9 +334,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__131__Step___" target="_self">Step 133</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__132__Step___" target="_self">Step 134</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__133__Step___" target="_self">Step 135</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__133__Step___" target="_self">Step 135</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__134__Step___" target="_self">Step 136</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__135__Step___" target="_self">Step 137</a>
@@ -330,9 +358,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__141__Step___" target="_self">Step 143</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__142__Step___" target="_self">Step 144</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__143__Step___" target="_self">Step 145</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__143__Step___" target="_self">Step 145</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__144__Step___" target="_self">Step 146</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__145__Step___" target="_self">Step 147</a>
@@ -352,9 +382,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__151__Step___" target="_self">Step 153</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__152__Step___" target="_self">Step 154</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__153__Step___" target="_self">Step 155</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__153__Step___" target="_self">Step 155</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__154__Step___" target="_self">Step 156</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__155__Step___" target="_self">Step 157</a>
@@ -374,9 +406,11 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__161__Step___" target="_self">Step 163</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__162__Step___" target="_self">Step 164</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__163__Step___" target="_self">Step 165</a>
-            </th><th>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__163__Step___" target="_self">Step 165</a>
+              </th>
+          <th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__164__Step___" target="_self">Step 166</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__165__Step___" target="_self">Step 167</a>
@@ -396,10 +430,10 @@
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__171__Step___" target="_self">Step 173</a>
             </th><th>
               <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__172__Step___" target="_self">Step 174</a>
-            </th><th>
-              <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__173__Step___" target="_self">Step 175</a>
-            </th>
-          </tr>
+            </th><tr>
+              <th>
+                <a href="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/tree/main/steps/__173__Step___" target="_self">Step 175</a>
+              </th>
           
   </thead>
 </table>

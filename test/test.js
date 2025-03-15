@@ -34,7 +34,7 @@ function generateTable(baseURL, links) {
   <thead>
     ${links
       .map((link, i) => {
-        if (i === 0 || i % 10 === 0) {
+        if (i === 0 || i % 5 === 0) {
           return `<tr>
               <th>
                 <a href="${baseURL}${link}" target="_self">Step ${i}</a>
