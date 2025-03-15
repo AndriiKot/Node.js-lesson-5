@@ -20,9 +20,6 @@ function getFolders(folderPath) {
   return folders;
 }
 
-const folders = getFolders(folderSteps);
-console.log('Folders in the "steps" directory:', folders);
-
 function generateDetailsTemplate(title, content) {
   return `\n<details>
       <summary>
@@ -32,30 +29,59 @@ function generateDetailsTemplate(title, content) {
 }
 
 function generateTable(baseURL, links) {
-  return `\n<table>
-    <thead>
-      <tr>
-        ${links
-          .map(
-            (link, i) =>
-              `<th>
+  return `
+<table>
+  <thead>
+    ${links
+      .map((link, i) => {
+        if (i === 0 || i % 10 === 0) {
+          return `<tr>
+              <th>
                 <a href="${baseURL}${link}" target="_self">Step ${i}</a>
-              </th>`
-          )
-          .join("")}
-      </tr>
-    </thead>
-  </table>\n`;
+              </th>
+          `;
+        } else if (i === links.length - 1) {
+          return `<th>
+              <a href="${baseURL}${link}" target="_self">Step ${i}</a>
+            </th>
+          </tr>
+          `;
+        } else {
+          return `<th>
+              <a href="${baseURL}${link}" target="_self">Step ${i}</a>
+            </th>`;
+        }
+      })
+      .join("")}
+  </thead>
+</table>
+`;
 }
 
-const table = generateTable(base_url_steps, folders);
+const table = generateTable(base_url_steps, getFolders(folderSteps));
 
 const README_TEMPLATE = [
   top_page,
   topic,
   generateDetailsTemplate("Follow Links Steps", table),
+  generateTableTechnologies(),
   back_to_top,
 ];
+
+function generateTableTechnologies() {
+  return `\n#### Technologies\n\n<table>
+      <thead>
+        <tr>
+          <th>HTML</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Test</td>
+        </tr>
+      </tbody>
+</table>\n`;
+}
 
 function createReadmeFile() {
   try {
