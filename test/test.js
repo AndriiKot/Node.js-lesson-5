@@ -29,28 +29,29 @@ function generateDetailsTemplate(title, content) {
 }
 
 function generateTable(baseURL, links) {
+  const columns = 5;
+  const th = (baseURL, link, i) =>
+    `<th><a href="${baseURL}${link}" target="_self">Step ${i}</a></th>`;
+  const values = {
+    0: function (baseURL, link, i) {
+      return `<tr>${th(baseURL, link, i)}`;
+    },
+    default: function (baseURL, link, i) {
+      return th(baseURL, link, i);
+    },
+    lastTh: function (baseURL, link, i) {
+      return `${th(baseURL, link)}</tr>`;
+    },
+  };
   return `
 <table>
   <thead>
     ${links
       .map((link, i) => {
-        if (i === 0 || i % 5 === 0) {
-          return `<tr>
-              <th>
-                <a href="${baseURL}${link}" target="_self">Step ${i}</a>
-              </th>
-          `;
-        } else if (i === links.length - 1) {
-          return `<th>
-              <a href="${baseURL}${link}" target="_self">Step ${i}</a>
-            </th>
-          </tr>
-          `;
-        } else {
-          return `<th>
-              <a href="${baseURL}${link}" target="_self">Step ${i}</a>
-            </th>`;
-        }
+        return (
+          values[i === 0 || i % columns] ||
+          values[i === links.length - 1 ? "lastTh" : "default"]
+        )(baseURL, link, i);
       })
       .join("")}
   </thead>
