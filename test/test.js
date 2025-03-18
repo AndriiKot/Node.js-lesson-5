@@ -11,6 +11,7 @@ const base_url = config.BASE_URL;
 
 const folderSteps = "./steps";
 const folderImagesPreviews = "./images/previews";
+const urlTreeBranch = `${base_url}/tree/${config.BRANCH}`;
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
@@ -25,8 +26,9 @@ const README_TEMPLATE = [
 ];
 
 function generateImagePreview(base_url_images, header_level, imageName) {
+  const alt = imageName.replace(/\.[^.]*$/g, "");
   return `<h${header_level}>preview</h${header_level}>
-    <img src="${base_url_images}/tree/${config.BRANCH}/images/previews/${imageName}" alt="${imageName}">
+    <img src="${urlTreeBranch}${folderImagesPreviews}${imageName}" alt="${alt}">
   `;
 }
 function getFolders(folderPath) {
