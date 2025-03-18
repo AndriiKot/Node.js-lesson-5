@@ -78,35 +78,59 @@ function createTableRow(baseURL, links, columns) {
     .join("");
 }
 
-function generateTableTechnologies(relevantTechnologies) {
-  return`
+function generateTableTechnologies(
+  relevantTechnologies,
+  th_height,
+  tb_height,
+  th_width,
+  tb_width
+) {
+  const th = (tech, height, width) => {
+    return `<th height=${height} width=${width}>${tech}</th>`;
+  }
+  const a = (link, img) => {
+    return `<a href=${link} target="_self">${img}</a>`
+  }
+
+  img = (src, alt) => {
+    return `<img src=${src} alt=${alt}>`
+  }
+  const tb = (tech, height, width, a) => {
+    return `<td height=${height} width=${width}>${a(technologiesDocsLinks[tech], img(base_url_technologies + technologiesSvg[tech], tech))}</td>`
+  }
+  return `
 <table>
   <thead>
-      ${relevantTechnologies.map((tech, i) => {
-        if(i === 0) {
-          return `<tr><th>${tech}</th>`;
-        } else if (i === relevantTechnologies.length - 1) {
-          return `<th>${tech}</th></tr>`;
-        } else {
-          return `<th>${tech}</th>`;
-        }
-      }).join("")}
+      ${relevantTechnologies
+        .map((tech, i) => {
+          if (i === 0) {
+            return `<tr>${th(tech, th_height, th_width)}`;
+          } else if (i === relevantTechnologies.length - 1) {
+            return `${th(tech, th_height, th_width)}</tr>`;
+          } else {
+            return th(tech, th_height, th_width);
+          }
+        })
+        .join("")}
   </thead>
   <tbody>
-      ${relevantTechnologies.map((tech, i) => {
-        if(i === 0) {
-          return `<tr><td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td>`;
-        } else if (i === relevantTechnologies.length - 1) {
-          return `<td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td></tr>`;
-        } else {
-          return `<td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td>`;
-        }
-      }).join("")}
+      ${relevantTechnologies
+        .map((tech, i) => {
+          if (i === 0) {
+            return `<tr>${tb(tech, tb_height, tb_width, a)}`;
+            // return `<tr><td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td>`;
+          } else if (i === relevantTechnologies.length - 1) {
+            return `${tb(tech, tb_height, tb_width, a)}</tr>`;
+            // return `<td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td></tr>`;
+          } else {
+            return tb(tech, tb_height, tb_width, a);
+            // return `<td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td>`;
+          }
+        })
+        .join("")}
   </tbody>
 </table>`;
 }
-
-
 
 function generateTable(baseURL, links, columns) {
   return `
@@ -119,7 +143,6 @@ function generateTable(baseURL, links, columns) {
 </table>
 `;
 }
-
 
 function createReadmeFile() {
   try {

@@ -23,10 +23,10 @@
 
 <table>
   <thead>
-      <tr><th>JavaScript</th><th>CSS</th><th>HTML5</th></tr>
+      <tr><th height=undefined width=undefined>JavaScript</th><th height=undefined width=undefined>CSS</th><th height=undefined width=undefined>HTML5</th></tr>
   </thead>
   <tbody>
-      <tr><td><a href="https://ecma-international.org/publications-and-standards/standards/" target="_self"><img src="https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/javascript-1.svg" alt="JavaScript"></a></td><td><a href="https://www.w3.org/Style/CSS/" target="_self"><img src="https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/css.svg" alt="CSS"></a></td><td><a href="https://html.spec.whatwg.org/multipage/" target="_self"><img src="https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/html.svg" alt="HTML5"></a></td></tr>
+      <tr><td height=undefined width=undefined><a href=https://ecma-international.org/publications-and-standards/standards/ target="_self"><img src=https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/javascript-1.svg alt=JavaScript></a></td><td height=undefined width=undefined><a href=https://www.w3.org/Style/CSS/ target="_self"><img src=https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/css.svg alt=CSS></a></td><td height=undefined width=undefined><a href=https://html.spec.whatwg.org/multipage/ target="_self"><img src=https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/html.svg alt=HTML5></a></td></tr>
   </tbody>
 </table>
 [Back to top](#top)
