@@ -24,7 +24,7 @@ const README_TEMPLATE = [
   generateDetailsTemplate("Follow Links Steps", table),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
-  generateTableTechnologies(config.TECHNOLOGIES),
+  generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
   back_to_top,
 ];
 
