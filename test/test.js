@@ -15,6 +15,7 @@ const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 const folderSteps = "./steps";
 const folderImagesPreviews = "./images/previews";
 const urlTreeBranch = `/tree/${config.BRANCH}`;
+const urlBlod = `/blob/${config.BRANCH}`;
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
@@ -31,7 +32,7 @@ const README_TEMPLATE = [
 function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
   const normalizeUrl = new URL(
-    path.join(base_url,'blob',urlTreeBranch, folderImagesPreviews, imageName),
+    path.join(base_url, urlBlod , folderImagesPreviews, imageName),
   ).toString();
   return `<h${header_level}>preview</h${header_level}>
     <img src="${normalizeUrl}" alt="${alt}">
