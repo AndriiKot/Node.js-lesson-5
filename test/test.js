@@ -19,6 +19,21 @@ const urlBlod = `/blob/${config.BRANCH}`;
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
+function generateCodesProject() {
+  const lastStepFolder = getFolders(folderSteps).at(-1);
+  const lastStepFiles = getFiles(path.resolve(folderSteps, lastStepFolder));
+  let stringCodesProject = "";
+
+  lastStepFiles.forEach((file) => {
+    const data = fs.readFileSync(
+      path.resolve(folderSteps, lastStepFolder, file),
+      { encoding: "utf8" }
+    );
+    stringCodesProject += `\n\n\`\`\`${file.replace(/.*\./, "")}\n${data}\n\`\`\`\n\n`;
+  });
+  return stringCodesProject;
+}
+
 const README_TEMPLATE = [
   top_page,
   topic,
@@ -28,6 +43,7 @@ const README_TEMPLATE = [
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
   back_to_top,
   generateTableLink(config.FILES),
+  generateCodesProject(),
 ];
 
 function generateImagePreview(base_url, header_level, imageName) {
