@@ -34,3 +34,5 @@
 
 [Back to top](#top)
 
+| [index.html](#index) | [styles.css](#styles) | [script.js](#script) | |
+------------------------ं | ------------------------ं | ------------------------ं | |

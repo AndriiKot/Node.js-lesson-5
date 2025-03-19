@@ -27,12 +27,13 @@ const README_TEMPLATE = [
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
   back_to_top,
+  generateTableLink(config.FILES),
 ];
 
 function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
   const normalizeUrl = new URL(
-    path.join(base_url, urlBlod , folderImagesPreviews, imageName),
+    path.join(base_url, urlBlod, folderImagesPreviews, imageName)
   ).toString();
   return `<h${header_level}>preview</h${header_level}>
     <img src="${normalizeUrl}" alt="${alt}">
@@ -125,13 +126,10 @@ function generateTableTechnologies(
         .map((tech, i) => {
           if (i === 0) {
             return `<tr>${tb(tech, tb_height, tb_width, a)}`;
-            // return `<tr><td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td>`;
           } else if (i === relevantTechnologies.length - 1) {
             return `${tb(tech, tb_height, tb_width, a)}</tr>`;
-            // return `<td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td></tr>`;
           } else {
             return tb(tech, tb_height, tb_width, a);
-            // return `<td><a href="${technologiesDocsLinks[tech]}" target="_self"><img src="${base_url_technologies}${technologiesSvg[tech]}" alt="${tech}"></a></td>`;
           }
         })
         .join("")}
@@ -149,6 +147,21 @@ function generateTable(baseURL, links, columns) {
   </tbody>
 </table>
 `;
+}
+
+function generateTableLink(files) {
+  let result = "| ";
+  for (let i = 0; i < files.length; i++) {
+    let fileName = files[i];
+    let fileNameWithoutExtension = fileName.split(".")[0];
+    result += `[${fileName}](#${fileNameWithoutExtension}) | `;
+  }
+  result += "|\n";
+  for (let i = 0; i < files.length; i++) {
+    result += "------------------------ं | ";
+  }
+  result += "|\n";
+  return result;
 }
 
 function createReadmeFile() {

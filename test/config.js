@@ -1,9 +1,11 @@
+const { FILE } = require("dns");
+
 const README_CONFIG = {
 
   README_TOPIC: "\n# Building a Calorie Counter\n",
   TECHNOLOGIES: ['JavaScript', 'CSS', 'HTML5'],
   LINKS_TO_DOCS_TECHNOLOGIES: 'technologies/docs_links.json',
-  LINKS_TO_README_CODE: ['index.html', 'styles.css', 'script.js'],
+  FILES: ['index.html', 'styles.css', 'script.js'],
   top_page: '\n<a id=top></a>\n',
   back_to_top_page: '\n\n[Back to top](#top)\n\n',
   PREVIEW: '../images/previews/',
