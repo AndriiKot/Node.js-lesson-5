@@ -37,6 +37,9 @@
 | [index.html](#indexhtml) |[styles.css](#stylescss) |[script.js](#scriptjs) |
  |------------------- | ------------------- | ------------------- |
 
+| [index.html](#indexhtml) | [styles.css](#stylescss) | [script.js](#scriptjs) |
+| ------------------------ | ------------------------ | ---------------------- |
+
 ### index.html
 
 ```html
