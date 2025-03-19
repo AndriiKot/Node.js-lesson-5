@@ -31,8 +31,7 @@ const README_TEMPLATE = [
 function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
   const normalizeUrl = new URL(
-    path.join(base_url,urlTreeBranch, folderImagesPreviews, imageName),
-    // base_url
+    path.join(base_url,'blob',urlTreeBranch, folderImagesPreviews, imageName),
   ).toString();
   return `<h${header_level}>preview</h${header_level}>
     <img src="${normalizeUrl}" alt="${alt}">
