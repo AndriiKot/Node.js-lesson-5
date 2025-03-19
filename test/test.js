@@ -158,7 +158,7 @@ function generateTableLink(files) {
   }
   result += "|\n";
   for (let i = 0; i < files.length; i++) {
-    result += "------------------------ं | ";
+    result += "------------------- | ";
   }
   result += "|\n";
   return result;
