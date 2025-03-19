@@ -34,10 +34,10 @@
 
 [Back to top](#top)
 
-| [index.html](#index) |[styles.css](#styles) |[script.js](#script) |
+| [index.html](#indexhtml) |[styles.css](#stylescss) |[script.js](#scriptjs) |
  |------------------- | ------------------- | ------------------- |
 
- ### index.html
+### index.html
 
 ```html
 <!DOCTYPE html>
@@ -162,5 +162,3 @@ select {
 ```
 
 [Back to top](#top)
-
-
