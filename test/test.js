@@ -14,7 +14,7 @@ const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 
 const folderSteps = "./steps";
 const folderImagesPreviews = "./images/previews";
-const urlTreeBranch = `${base_url}/tree/${config.BRANCH}`;
+const urlTreeBranch = `/tree/${config.BRANCH}`;
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
@@ -28,10 +28,14 @@ const README_TEMPLATE = [
   back_to_top,
 ];
 
-function generateImagePreview(base_url_images, header_level, imageName) {
+function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
+  const normalizeUrl = new URL(
+    path.join(urlTreeBranch, folderImagesPreviews, imageName),
+    base_url
+  ).toString();
   return `<h${header_level}>preview</h${header_level}>
-    <img src="${urlTreeBranch}${folderImagesPreviews}${imageName}" alt="${alt}">
+    <img src="${normalizeUrl}" alt="${alt}">
   `;
 }
 function getFolders(folderPath) {
@@ -87,17 +91,20 @@ function generateTableTechnologies(
 ) {
   const th = (tech, height, width) => {
     return `<th height=${height} width=${width}>${tech}</th>`;
-  }
+  };
   const a = (link, img) => {
-    return `<a href=${link} target="_self">${img}</a>`
-  }
+    return `<a href=${link} target="_self">${img}</a>`;
+  };
 
   img = (src, alt) => {
-    return `<img src=${src} alt=${alt}>`
-  }
+    return `<img src=${src} alt=${alt}>`;
+  };
   const tb = (tech, height, width, a) => {
-    return `<td height=${height} width=${width}>${a(technologiesDocsLinks[tech], img(base_url_technologies + technologiesSvg[tech], tech))}</td>`
-  }
+    return `<td height=${height} width=${width}>${a(
+      technologiesDocsLinks[tech],
+      img(base_url_technologies + technologiesSvg[tech], tech)
+    )}</td>`;
+  };
   return `
 <table>
   <thead>

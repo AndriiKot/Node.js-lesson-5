@@ -5,7 +5,7 @@ const README_CONFIG = {
   LINKS_TO_DOCS_TECHNOLOGIES: 'technologies/docs_links.json',
   LINKS_TO_README_CODE: ['index.html', 'styles.css', 'script.js'],
   top_page: '\n<a id=top></a>\n',
-  back_to_top_page: '\n[Back to top](#top)\n',
+  back_to_top_page: '\n\n[Back to top](#top)\n\n',
   PREVIEW: '../images/previews/',
   BASE_URL: "https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/",
   BRANCH: "main",

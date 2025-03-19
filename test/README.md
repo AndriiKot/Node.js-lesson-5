@@ -17,9 +17,11 @@
 </table>
 </details>
 <h4>preview</h4>
-    <img src="https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp//tree/main./images/previewspreview_step01.png" alt="preview_step01">
+    <img src="https://github.com/tree/main/images/previews/preview_step01.png" alt="preview_step01">
   
+
 [Back to top](#top)
+
 
 <table>
   <thead>
@@ -29,4 +31,6 @@
       <tr><td height=100 width=100><a href=https://ecma-international.org/publications-and-standards/standards/ target="_self"><img src=https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/javascript-1.svg alt=JavaScript></a></td><td height=100 width=100><a href=https://www.w3.org/Style/CSS/ target="_self"><img src=https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/css.svg alt=CSS></a></td><td height=100 width=100><a href=https://html.spec.whatwg.org/multipage/ target="_self"><img src=https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/html.svg alt=HTML5></a></td></tr>
   </tbody>
 </table>
+
 [Back to top](#top)
+
