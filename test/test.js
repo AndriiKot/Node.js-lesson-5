@@ -154,9 +154,9 @@ function generateTableLink(files) {
   for (let i = 0; i < files.length; i++) {
     let fileName = files[i];
     let fileNameWithoutExtension = fileName.split(".")[0];
-    result += `[${fileName}](#${fileNameWithoutExtension}) | `;
+    result += `[${fileName}](#${fileNameWithoutExtension}) | \n`;
   }
-  result += "\n|";
+  result += "|";
   for (let i = 0; i < files.length; i++) {
     result += "------------------- | ";
   }
