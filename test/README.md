@@ -39,6 +39,10 @@
 
 
 
+### index.html 
+
+
+
 ```html
 ﻿<!DOCTYPE html>
 <html lang="en">
@@ -78,6 +82,10 @@
 </html>
 
 ```
+
+
+
+### script.js 
 
 
 
@@ -362,6 +370,10 @@ function pickEight() {
   pick(8);
 };
 ```
+
+
+
+### styles.css 
 
 
 

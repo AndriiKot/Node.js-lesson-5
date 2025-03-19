@@ -29,7 +29,7 @@ function generateCodesProject() {
       path.resolve(folderSteps, lastStepFolder, file),
       { encoding: "utf8" }
     );
-    stringCodesProject += `\n\n\`\`\`${file.replace(/.*\./, "")}\n${data}\n\`\`\`\n\n`;
+    stringCodesProject += `\n\n### ${file} \n\n\n\n\`\`\`${file.replace(/.*\./, "")}\n${data}\n\`\`\`\n\n`;
   });
   return stringCodesProject;
 }
