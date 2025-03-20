@@ -3,8 +3,8 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const config = require("./config");
-const technologiesDocsLinks = require("../technologies/docs_links.json");
-const technologiesSvg = require("../technologies/technologies_svg.json");
+const technologiesDocsLinks = require("./technologies/docs_links.json");
+const technologiesSvg = require("./technologies/technologies_svg.json");
 
 const filePath = path.join(__dirname, "README.md");
 
@@ -14,8 +14,8 @@ const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 
-const folderSteps = "./steps";
-const folderImagesPreviews = "./images/previews";
+const folderSteps = "../../steps";
+const folderImagesPreviews = "../../images/previews";
 const urlTreeBranch = `/tree/${config.BRANCH}`;
 const urlBlod = `/blob/${config.BRANCH}`;
 
@@ -122,9 +122,10 @@ function generateTableTechnologies(
     return `<a href=${link} target="_self">${img}</a>`;
   };
 
-  img = (src, alt) => {
+  const img = (src, alt) => {
     return `<img src=${src} alt=${alt}>`;
   };
+  
   const tb = (tech, height, width, a) => {
     return `<td height=${height} width=${width}>${a(
       technologiesDocsLinks[tech],
