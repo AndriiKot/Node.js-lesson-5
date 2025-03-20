@@ -6,7 +6,7 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
-const filePath = path.join(__dirname, "README.md");
+const filePath = path.join("../../", "README.md");
 
 const topic = config.README_TOPIC;
 const top_page = config.top_page;
@@ -125,7 +125,7 @@ function generateTableTechnologies(
   const img = (src, alt) => {
     return `<img src=${src} alt=${alt}>`;
   };
-  
+
   const tb = (tech, height, width, a) => {
     return `<td height=${height} width=${width}>${a(
       technologiesDocsLinks[tech],
