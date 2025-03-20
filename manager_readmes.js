@@ -27,7 +27,7 @@ function generateCodesProject() {
   const intersection = lastStepFiles.filter(item => config.FILES.includes(item));
   let stringCodesProject = "";
 
-  lastStepFiles.forEach((file) => {
+  intersection.forEach((file) => {
     const data = fs.readFileSync(
       path.resolve(folderSteps, lastStepFolder, file),
       { encoding: "utf8" }
@@ -53,7 +53,6 @@ const README_TEMPLATE = [
   back_to_top,
   // generateTableLink(config.FILES),
   generateCodesProject(),
-  back_to_top,
 ];
 
 function generateImagePreview(base_url, header_level, imageName) {
