@@ -3,10 +3,10 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const config = require("./config");
-const technologiesDocsLinks = require("../technologies/docs_links.json");
-const technologiesSvg = require("../technologies/technologies_svg.json");
+const technologiesDocsLinks = require("./technologies/docs_links.json");
+const technologiesSvg = require("./technologies/technologies_svg.json");
 
-const filePath = path.join(__dirname, "README.md");
+const filePath = path.join(__dirname, "test_README.md");
 
 const topic = config.README_TOPIC;
 const top_page = config.top_page;
@@ -14,8 +14,8 @@ const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 
-const folderSteps = "./steps";
-const folderImagesPreviews = "./images/previews";
+const folderSteps = "steps";
+const folderImagesPreviews = "images/previews";
 const urlTreeBranch = `/tree/${config.BRANCH}`;
 const urlBlod = `/blob/${config.BRANCH}`;
 
@@ -24,9 +24,12 @@ const table = generateTable(base_url, getFolders(folderSteps), 5);
 function generateCodesProject() {
   const lastStepFolder = getFolders(folderSteps).at(-1);
   const lastStepFiles = getFiles(path.resolve(folderSteps, lastStepFolder));
+  const intersection = lastStepFiles.filter((item) =>
+    config.FILES.includes(item)
+  );
   let stringCodesProject = "";
 
-  lastStepFiles.forEach((file) => {
+  intersection.forEach((file) => {
     const data = fs.readFileSync(
       path.resolve(folderSteps, lastStepFolder, file),
       { encoding: "utf8" }
@@ -52,13 +55,12 @@ const README_TEMPLATE = [
   back_to_top,
   // generateTableLink(config.FILES),
   generateCodesProject(),
-  back_to_top,
 ];
 
 function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
   const normalizeUrl = new URL(
-    path.join(base_url, urlBlod, folderImagesPreviews, imageName)
+    path.join(base_url, urlBlod, "images/previews", imageName)
   ).toString();
   return `<h${header_level}>preview</h${header_level}>
     <img src="${normalizeUrl}" alt="${alt}">
@@ -122,9 +124,10 @@ function generateTableTechnologies(
     return `<a href=${link} target="_self">${img}</a>`;
   };
 
-  img = (src, alt) => {
+  const img = (src, alt) => {
     return `<img src=${src} alt=${alt}>`;
   };
+
   const tb = (tech, height, width, a) => {
     return `<td height=${height} width=${width}>${a(
       technologiesDocsLinks[tech],
@@ -191,9 +194,13 @@ function generateTableLink(files) {
 
 function createReadmeFile() {
   try {
-    fs.writeFileSync(filePath, README_TEMPLATE.join(""), {
+    const projectRoot = path.join(__dirname, "..", "..");
+    const readmePath = path.join(projectRoot, "TEST_README.md");
+
+    fs.writeFileSync(readmePath, README_TEMPLATE.join(""), {
       flag: "w",
     });
+
     console.log("README.md file created/updated successfully!");
   } catch (err) {
     console.error("Error creating/updating README.md file:", err);
