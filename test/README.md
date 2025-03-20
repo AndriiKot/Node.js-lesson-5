@@ -34,9 +34,6 @@
 
 [Back to top](#top)
 
-| [index.html](#indexhtml) |[styles.css](#stylescss) |[script.js](#scriptjs) |
- |------------------- | ------------------- | ------------------- | 
-
 
 
 <details>
@@ -451,3 +448,6 @@ button {
 
 
 </details>
+
+[Back to top](#top)
+

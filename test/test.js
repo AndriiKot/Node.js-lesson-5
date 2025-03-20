@@ -48,8 +48,9 @@ const README_TEMPLATE = [
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
   back_to_top,
-  generateTableLink(config.FILES),
+  // generateTableLink(config.FILES),
   generateCodesProject(),
+  back_to_top,
 ];
 
 function generateImagePreview(base_url, header_level, imageName) {
