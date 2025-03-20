@@ -6,7 +6,7 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
-const filePath = path.join("../../", "test_README.md");
+const filePath = path.join(__dirname, "test_README.md");
 
 const topic = config.README_TOPIC;
 const top_page = config.top_page;
@@ -14,8 +14,8 @@ const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 
-const folderSteps = "../../steps";
-const folderImagesPreviews = "../../images/previews";
+const folderSteps = "steps";
+const folderImagesPreviews = "images/previews";
 const urlTreeBranch = `/tree/${config.BRANCH}`;
 const urlBlod = `/blob/${config.BRANCH}`;
 
@@ -24,7 +24,9 @@ const table = generateTable(base_url, getFolders(folderSteps), 5);
 function generateCodesProject() {
   const lastStepFolder = getFolders(folderSteps).at(-1);
   const lastStepFiles = getFiles(path.resolve(folderSteps, lastStepFolder));
-  const intersection = lastStepFiles.filter(item => config.FILES.includes(item));
+  const intersection = lastStepFiles.filter((item) =>
+    config.FILES.includes(item)
+  );
   let stringCodesProject = "";
 
   intersection.forEach((file) => {
@@ -58,7 +60,7 @@ const README_TEMPLATE = [
 function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
   const normalizeUrl = new URL(
-    path.join(base_url, urlBlod, 'images/previews', imageName)
+    path.join(base_url, urlBlod, "images/previews", imageName)
   ).toString();
   return `<h${header_level}>preview</h${header_level}>
     <img src="${normalizeUrl}" alt="${alt}">
@@ -192,9 +194,13 @@ function generateTableLink(files) {
 
 function createReadmeFile() {
   try {
-    fs.writeFileSync(filePath, README_TEMPLATE.join(""), {
+    const projectRoot = path.join(__dirname, "..", "..");
+    const readmePath = path.join(projectRoot, "TEST_README.md");
+
+    fs.writeFileSync(readmePath, README_TEMPLATE.join(""), {
       flag: "w",
     });
+
     console.log("README.md file created/updated successfully!");
   } catch (err) {
     console.error("Error creating/updating README.md file:", err);
