@@ -6,7 +6,7 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
-const filePath = path.join("../../", "README.md");
+const filePath = path.join("../../", "test_README.md");
 
 const topic = config.README_TOPIC;
 const top_page = config.top_page;
@@ -24,6 +24,7 @@ const table = generateTable(base_url, getFolders(folderSteps), 5);
 function generateCodesProject() {
   const lastStepFolder = getFolders(folderSteps).at(-1);
   const lastStepFiles = getFiles(path.resolve(folderSteps, lastStepFolder));
+  const intersection = lastStepFiles.filter(item => config.FILES.includes(item));
   let stringCodesProject = "";
 
   lastStepFiles.forEach((file) => {
@@ -58,7 +59,7 @@ const README_TEMPLATE = [
 function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
   const normalizeUrl = new URL(
-    path.join(base_url, urlBlod, folderImagesPreviews, imageName)
+    path.join(base_url, urlBlod, 'images/previews', imageName)
   ).toString();
   return `<h${header_level}>preview</h${header_level}>
     <img src="${normalizeUrl}" alt="${alt}">
