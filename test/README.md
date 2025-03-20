@@ -39,7 +39,10 @@
 
 
 
-### index.html 
+<details>
+  <summary>
+    <h4>index.html</h4>
+  </summary>
 
 
 
@@ -85,7 +88,15 @@
 
 
 
-### script.js 
+[Back to top](#top)
+
+
+</details>
+
+<details>
+  <summary>
+    <h4>script.js</h4>
+  </summary>
 
 
 
@@ -373,7 +384,15 @@ function pickEight() {
 
 
 
-### styles.css 
+[Back to top](#top)
+
+
+</details>
+
+<details>
+  <summary>
+    <h4>styles.css</h4>
+  </summary>
 
 
 
@@ -426,3 +445,9 @@ button {
 
 ```
 
+
+
+[Back to top](#top)
+
+
+</details>

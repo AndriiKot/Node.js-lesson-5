@@ -29,7 +29,13 @@ function generateCodesProject() {
       path.resolve(folderSteps, lastStepFolder, file),
       { encoding: "utf8" }
     );
-    stringCodesProject += `\n\n### ${file} \n\n\n\n\`\`\`${file.replace(/.*\./, "")}\n${data}\n\`\`\`\n\n`;
+    stringCodesProject += `\n
+<details>
+  <summary>
+    <h4>${file}</h4>
+  </summary>
+\n\n\n\`\`\`${file.replace(/.*\./, "")}\n${data}\n\`\`\`\n\n${back_to_top}
+</details>`;
   });
   return stringCodesProject;
 }
