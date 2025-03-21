@@ -12,9 +12,6 @@ const README_CONFIG = {
   BASE_URL_TECHNOLOGIES:
     "https://github.com/AndriiKot/iconsSVG_and_linksDocs/blob/main/svg/",
 
-  MAIN_README_DIFF: {
-    // BASE_URL: "https://github.com/AndriiKot/JS__Validation_by_Building_a_Calorie_Counter__freeCodeCamp/"
-  },
   STEP_README_DIFF: {
     DESCRIPTION_OF_THE_TASK: "in developen",
   },
