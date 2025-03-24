@@ -205,4 +205,4 @@ function createReadmeFile(directoryPath) {
   }
 }
 
-createReadmeFile(join(__dirname, "..", ".."));
+createReadmeFile(path.join(__dirname, "..", ".."));
