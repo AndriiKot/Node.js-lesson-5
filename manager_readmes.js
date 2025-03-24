@@ -206,3 +206,4 @@ function createReadmeFile(directoryPath) {
 }
 
 createReadmeFile(path.join(__dirname, "..", ".."));
+createReadmeFile(path.join(__dirname, "..", "..", "./steps/__02__step__"));
