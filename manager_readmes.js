@@ -27,6 +27,11 @@ const table = generateTable(base_url, getFolders(folderSteps), 5);
 function getLastFolderStep(folders) {
   return folders.at(-1);
 }
+
+function getNumberStep(folder) {
+  return `Step  ${+folder.replace(/\D/g, "")}`;
+}
+
 function generateCodesProject() {
   const lastStepFolder = getFolders(folderSteps).at(-1);
   const lastStepFiles = getFiles(path.resolve(folderSteps, lastStepFolder));
@@ -65,7 +70,7 @@ const README_MAIN = [
 const README_STEP = [
   top_page,
   topic,
-  generateDetailsTemplate("Description of the Task", 'TEST '),
+  generateDetailsTemplate("Description of the Task", "TEST "),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
@@ -208,11 +213,11 @@ function generateTableLink(files) {
   return result;
 }
 
-function createReadmeFile(directoryPath, tamplate) {
+function createReadmeFile(directoryPath, template) {
   try {
     const readmePath = path.join(directoryPath, "README.md");
 
-    fs.writeFileSync(readmePath, tamplate.join(""), {
+    fs.writeFileSync(readmePath, template.join(""), {
       flag: "w",
     });
 
@@ -225,3 +230,7 @@ function createReadmeFile(directoryPath, tamplate) {
 createReadmeFile(MAIN_PATH, README_MAIN);
 createReadmeFile(STEPS_PATH, README_MAIN);
 createReadmeFile(LAST_STEP_PATH, README_STEP);
+
+fs.writeFileSync(LAST_STEP_PATH + "/test-fn-getNumberStep.txt", getNumberStep, {
+  flag: "w",
+});
