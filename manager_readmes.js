@@ -6,8 +6,10 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
+const LAST_STEP_FOLDER = getLastFolderStep();
 const MAIN_PATH = path.join(__dirname, "..", "..");
 const STEPS_PATH = path.join(MAIN_PATH, "steps");
+const LAST_STEP_PATH = path.join(STEPS_PATH, LAST_STEP_FOLDER);
 
 const topic = config.README_TOPIC;
 const top_page = config.top_page;
@@ -21,6 +23,9 @@ const urlBlod = `/blob/${config.BRANCH}`;
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
+function getLastFolderStep() {
+  return getFolders(folderSteps).at(-1);
+}
 function generateCodesProject() {
   const lastStepFolder = getFolders(folderSteps).at(-1);
   const lastStepFiles = getFiles(path.resolve(folderSteps, lastStepFolder));
@@ -218,7 +223,4 @@ function createReadmeFile(directoryPath, tamplate) {
 
 createReadmeFile(MAIN_PATH, README_MAIN);
 createReadmeFile(STEPS_PATH, README_MAIN);
-createReadmeFile(
-  path.join(STEPS_PATH, getFolders(folderSteps).at(-1)),
-  README_STEP
-);
+createReadmeFile(LAST_STEP_PATH, README_STEP);
