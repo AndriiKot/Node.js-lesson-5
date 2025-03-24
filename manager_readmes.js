@@ -6,7 +6,8 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
-const filePath = path.join(__dirname, "README.md");
+const MAIN_PATH = path.join(__dirname, "..", "..");
+const STEPS_PATH = path.join(MAIN_PATH, "steps");
 
 const topic = config.README_TOPIC;
 const top_page = config.top_page;
@@ -215,8 +216,9 @@ function createReadmeFile(directoryPath, tamplate) {
   }
 }
 
-createReadmeFile(path.join(__dirname, "..", ".."), README_MAIN);
+createReadmeFile(MAIN_PATH, README_MAIN);
+createReadmeFile(STEPS_PATH, README_MAIN);
 createReadmeFile(
-  path.join(__dirname, "..", "..", "./steps/__02__step__"),
+  path.join(STEPS_PATH, getFolders(folderSteps).at(-1)),
   README_STEP
 );
