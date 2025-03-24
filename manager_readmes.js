@@ -231,6 +231,6 @@ createReadmeFile(MAIN_PATH, README_MAIN);
 createReadmeFile(STEPS_PATH, README_MAIN);
 createReadmeFile(LAST_STEP_PATH, README_STEP);
 
-fs.writeFileSync(LAST_STEP_PATH + "/test-fn-getNumberStep.txt", getNumberStep, {
+fs.writeFileSync(LAST_STEP_PATH + "/test-fn-getNumberStep.txt", getNumberStep(LAST_STEP_FOLDER), {
   flag: "w",
 });
