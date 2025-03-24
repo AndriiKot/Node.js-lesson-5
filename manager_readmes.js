@@ -44,7 +44,7 @@ function generateCodesProject() {
   return stringCodesProject;
 }
 
-const README_TEMPLATE = [
+const README_MAIN = [
   top_page,
   topic,
   generateDetailsTemplate("Follow Links Steps", table),
@@ -52,7 +52,17 @@ const README_TEMPLATE = [
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
   back_to_top,
-  // generateTableLink(config.FILES),
+  generateCodesProject(),
+];
+
+const README_STEP = [
+  top_page,
+  topic,
+  generateDetailsTemplate("Description of the Task", table),
+  generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
+  back_to_top,
+  generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
+  back_to_top,
   generateCodesProject(),
 ];
 
@@ -191,11 +201,11 @@ function generateTableLink(files) {
   return result;
 }
 
-function createReadmeFile(directoryPath) {
+function createReadmeFile(directoryPath, tamplate) {
   try {
     const readmePath = path.join(directoryPath, "README.md");
 
-    fs.writeFileSync(readmePath, README_TEMPLATE.join(""), {
+    fs.writeFileSync(readmePath, tamplate.join(""), {
       flag: "w",
     });
 
@@ -205,5 +215,8 @@ function createReadmeFile(directoryPath) {
   }
 }
 
-createReadmeFile(path.join(__dirname, "..", ".."));
-createReadmeFile(path.join(__dirname, "..", "..", "./steps/__02__step__"));
+createReadmeFile(path.join(__dirname, "..", ".."), README_MAIN);
+createReadmeFile(
+  path.join(__dirname, "..", "..", "./steps/__02__step__"),
+  README_STEP
+);
