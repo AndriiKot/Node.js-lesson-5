@@ -6,7 +6,12 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
-const LAST_STEP_FOLDER = getLastFolderStep();
+const folderSteps = "steps";
+const folderImagesPreviews = "images/previews";
+const urlBlod = `/blob/${config.BRANCH}`;
+
+const STEPS = getFolders(folderSteps);
+const LAST_STEP_FOLDER = getLastFolderStep(STEPS);
 const MAIN_PATH = path.join(__dirname, "..", "..");
 const STEPS_PATH = path.join(MAIN_PATH, "steps");
 const LAST_STEP_PATH = path.join(STEPS_PATH, LAST_STEP_FOLDER);
@@ -17,14 +22,10 @@ const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 
-const folderSteps = "steps";
-const folderImagesPreviews = "images/previews";
-const urlBlod = `/blob/${config.BRANCH}`;
-
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
-function getLastFolderStep() {
-  return getFolders(folderSteps).at(-1);
+function getLastFolderStep(folders) {
+  return folders.at(-1);
 }
 function generateCodesProject() {
   const lastStepFolder = getFolders(folderSteps).at(-1);
