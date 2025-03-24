@@ -191,9 +191,9 @@ function generateTableLink(files) {
   return result;
 }
 
-function createReadmeFile(path) {
+function createReadmeFile(directoryPath) {
   try {
-    const readmePath = path.join(path, "README.md");
+    const readmePath = join(directoryPath, "README.md");
 
     fs.writeFileSync(readmePath, README_TEMPLATE.join(""), {
       flag: "w",
@@ -205,5 +205,4 @@ function createReadmeFile(path) {
   }
 }
 
-createReadmeFile(path.join(__dirname, "..", ".."));
-
+createReadmeFile(join(__dirname, "..", ".."));
