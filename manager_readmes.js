@@ -70,7 +70,10 @@ const README_MAIN = [
 const README_STEP = [
   top_page,
   topic,
-  generateDetailsTemplate("Description of the Task", "TEST "),
+  generateDetailsTemplate(
+    "Description of the Task",
+    getNumberStep(LAST_STEP_FOLDER)
+  ),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
@@ -230,7 +233,3 @@ function createReadmeFile(directoryPath, template) {
 createReadmeFile(MAIN_PATH, README_MAIN);
 createReadmeFile(STEPS_PATH, README_MAIN);
 createReadmeFile(LAST_STEP_PATH, README_STEP);
-
-fs.writeFileSync(LAST_STEP_PATH + "/test-fn-getNumberStep.txt", getNumberStep(LAST_STEP_FOLDER), {
-  flag: "w",
-});
