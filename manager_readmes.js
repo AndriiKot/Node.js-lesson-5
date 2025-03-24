@@ -16,7 +16,6 @@ const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 
 const folderSteps = "steps";
 const folderImagesPreviews = "images/previews";
-const urlTreeBranch = `/tree/${config.BRANCH}`;
 const urlBlod = `/blob/${config.BRANCH}`;
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
@@ -192,10 +191,9 @@ function generateTableLink(files) {
   return result;
 }
 
-function createReadmeFile() {
+function createReadmeFile(path) {
   try {
-    const projectRoot = path.join(__dirname, "..", "..");
-    const readmePath = path.join(projectRoot, "README.md");
+    const readmePath = path.join(path, "README.md");
 
     fs.writeFileSync(readmePath, README_TEMPLATE.join(""), {
       flag: "w",
@@ -207,4 +205,5 @@ function createReadmeFile() {
   }
 }
 
-createReadmeFile();
+createReadmeFile(path.join(__dirname, "..", ".."));
+
