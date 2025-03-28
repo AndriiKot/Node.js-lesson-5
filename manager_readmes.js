@@ -29,7 +29,7 @@ function getLastFolderStep(folders) {
 }
 
 function getNumberStep(folder) {
-  return `Step  ${+folder.replace(/\D/g, "")}`;
+  return `#### Step  ${+folder.replace(/\D/g, "")}`;
 }
 
 function generateCodesProject() {
