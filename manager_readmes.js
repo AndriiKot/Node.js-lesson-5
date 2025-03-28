@@ -74,10 +74,6 @@ const README_STEP = [
     "Description of the Task",
     getNumberStep(LAST_STEP_FOLDER)
   ),
-  generateDetailsTemplate(
-    "Description of the Task",
-    getNumberStep(LAST_STEP_FOLDER)
-  ),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
