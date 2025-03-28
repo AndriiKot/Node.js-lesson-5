@@ -114,7 +114,8 @@ function generateDetailsTemplate(title, content) {
       <summary>
         <h4>${title}</h4>
       </summary>
-       ${content}</details>\n`;
+       ${content}
+      </details>\n`;
 }
 
 function createTableHeader(baseURL, link, i) {
