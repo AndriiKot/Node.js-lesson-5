@@ -30,7 +30,7 @@ function getLastFolderStep(folders) {
 
 function getNumberStep(folder) {
   console.log("TEST: getNumberStep", folder);
-  return `<h4>Step  ${+folder.replace(/\D/g, "")}</h4>`;
+  return `<h3>Step  ${+folder.replace(/\D/g, "")}</h3>`;
 }
 
 function generateCodesProject() {
