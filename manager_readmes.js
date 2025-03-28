@@ -29,7 +29,6 @@ function getLastFolderStep(folders) {
 }
 
 function getNumberStep(folder) {
-  console.log("TEST: getNumberStep", folder);
   return `<h3>Step  ${+folder.replace(/\D/g, "")}</h3>`;
 }
 
@@ -71,6 +70,10 @@ const README_MAIN = [
 const README_STEP = [
   top_page,
   topic,
+  generateDetailsTemplate(
+    "Description of the Task",
+    getNumberStep(LAST_STEP_FOLDER)
+  ),
   generateDetailsTemplate(
     "Description of the Task",
     getNumberStep(LAST_STEP_FOLDER)
