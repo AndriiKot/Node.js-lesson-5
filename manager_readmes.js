@@ -38,7 +38,7 @@ function readDescriptionTask() {
 }
 
 function parseFileTitle(newContent) {
-  fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
+  return fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
 }
 
 function cleanText(text) {
