@@ -28,6 +28,11 @@ function getLastFolderStep(folders) {
   return folders.at(-1);
 }
 
+function readDescriptionTask() {
+ const task = fs.readFileSync(path.join(LAST_STEP_PATH, 'title.txt'), { encoding: 'utf8' });
+ return task
+}
+
 function getNumberStep(folder) {
   return `<h3>Step  ${+folder.replace(/\D/g, "")}</h3>`;
 }
@@ -72,7 +77,7 @@ const README_STEP = [
   topic,
   generateDetailsTemplate(
     "Description of the Task",
-    getNumberStep(LAST_STEP_FOLDER)
+    `${getNumberStep(LAST_STEP_FOLDER)}\n\n${readDescriptionTask()}`
   ),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
