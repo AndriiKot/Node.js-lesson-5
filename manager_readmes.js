@@ -22,6 +22,7 @@ const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
 const last_description_task = readDescriptionTask();
+const title = cleanText(last_description_task);
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
@@ -266,7 +267,7 @@ function createReadmeFile(directoryPath, template) {
     console.error("Error creating/updating README.md file:", err);
   }
 }
-parseFileTitle(last_description_task);
+parseFileTitle(title);
 createReadmeFile(MAIN_PATH, README_MAIN);
 createReadmeFile(STEPS_PATH, README_MAIN);
 createReadmeFile(LAST_STEP_PATH, README_STEP);
