@@ -38,9 +38,13 @@ function readDescriptionTask() {
 }
 
 function parseFileTitle(newContent) {
-  return fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
+  try {
+    fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
+    console.log("File 'title.txt' has been overwritten.");
+  } catch (err) {
+    console.error("Error writing file:", err);
+  }
 }
-
 function cleanText(text) {
   text = text.replace(/<[^>]+>/g, "");
   text = text.replace(/\s*/g, "");
