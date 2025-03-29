@@ -35,6 +35,12 @@ function readDescriptionTask() {
     encoding: "utf8",
   });
   task = task.replace(' id="description"', "");
+  const regex = /<[^>]+>/g;
+
+  if (!regex.test(text)) {
+    return "";
+  }
+
   return task;
 }
 
@@ -277,6 +283,7 @@ function createReadmeFile(directoryPath, template) {
     console.error("Error creating/updating README.md file:", err);
   }
 }
+
 parseFileTitle(title);
 createReadmeFile(MAIN_PATH, README_MAIN);
 createReadmeFile(STEPS_PATH, README_MAIN);
