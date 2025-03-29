@@ -48,12 +48,12 @@ function parseFileTitle(newContent) {
 }
 function cleanText(text) {
   if (!/'Step .*'/g.test(text)) {
-    text = getNumberStep(LAST_STEP_FOLDER) + "\n\n" + text;
+    text = getNumberStep(LAST_STEP_FOLDER) + "\n" + text;
   }
 
   const regex = /<[^>]+>/g;
+
   if (!regex.test(text)) {
-    console.error("Text does not contain HTML tags.");
     return text;
   }
 
