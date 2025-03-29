@@ -21,6 +21,7 @@ const top_page = config.top_page;
 const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
+const last_description_task = readDescriptionTask();
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
@@ -29,8 +30,11 @@ function getLastFolderStep(folders) {
 }
 
 function readDescriptionTask() {
- const task = fs.readFileSync(path.join(LAST_STEP_PATH, 'title.txt'), { encoding: 'utf8' });
- return task
+  let task = fs.readFileSync(path.join(LAST_STEP_PATH, "title.txt"), {
+    encoding: "utf8",
+  });
+  task = task.replace('id="description', "");
+  return task;
 }
 
 function getNumberStep(folder) {
@@ -77,7 +81,7 @@ const README_STEP = [
   topic,
   generateDetailsTemplate(
     "Description of the Task",
-    `${getNumberStep(LAST_STEP_FOLDER)}\n\n${readDescriptionTask()}`
+    `${getNumberStep(LAST_STEP_FOLDER)}\n\n${last_description_task}`
   ),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
