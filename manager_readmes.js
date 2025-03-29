@@ -47,10 +47,9 @@ function parseFileTitle(newContent) {
   }
 }
 function cleanText(text) {
-  if (!/'Step .*'/g.test(text)) {
+  if (!text.startsWith("Step")) {
     text = getNumberStep(LAST_STEP_FOLDER) + "\n" + text;
   }
-
   const regex = /<[^>]+>/g;
 
   if (!regex.test(text)) {
