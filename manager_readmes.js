@@ -47,10 +47,15 @@ function parseFileTitle(newContent) {
   }
 }
 function cleanText(text) {
+  if (!/'Step .*'/g.test(text)) {
+    text = getNumberStep(LAST_STEP_FOLDER) + "\n\n" + text;
+  }
+
   const regex = /<[^>]+>/g;
   if (!regex.test(text)) {
     return text;
   }
+  
   text = text.replace(/<[^>]+>/g, "");
 
   let cleanedText = "";
