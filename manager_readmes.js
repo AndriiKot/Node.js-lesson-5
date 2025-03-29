@@ -47,7 +47,8 @@ function parseFileTitle(newContent) {
   }
 }
 function cleanText(text) {
-  if (!text.test(/<[^>]+>/g)) {
+  const regex = /<[^>]+>/g;
+  if (!regex.test(text)) {
     return text;
   }
   text = text.replace(/<[^>]+>/g, "");
