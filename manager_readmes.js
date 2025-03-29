@@ -33,7 +33,7 @@ function readDescriptionTask() {
   let task = fs.readFileSync(path.join(LAST_STEP_PATH, "title.txt"), {
     encoding: "utf8",
   });
-  task = task.replace('id="description"', "");
+  task = task.replace(' id="description"', "");
   return task;
 }
 
