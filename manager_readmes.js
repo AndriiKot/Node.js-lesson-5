@@ -37,6 +37,30 @@ function readDescriptionTask() {
   return task;
 }
 
+function parseFileTitle(newContent) {
+  fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
+}
+
+function cleanText(text) {
+  text = text.replace(/<[^>]+>/g, "");
+  text = text.replace(/\s*/g, "");
+
+  let cleanedText = "";
+  const words = text.split(" ");
+  let currentLineLength = 0;
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    if (currentLineLength + word.length > 50) {
+      cleanedText += "\n";
+      currentLineLength = 0;
+    }
+    cleanedText += word + " ";
+    currentLineLength += word.length + 1;
+  }
+
+  return cleanedText.trim();
+}
+
 function getNumberStep(folder) {
   return `<h3>Step  ${+folder.replace(/\D/g, "")}</h3>`;
 }
@@ -238,7 +262,7 @@ function createReadmeFile(directoryPath, template) {
     console.error("Error creating/updating README.md file:", err);
   }
 }
-
+parseFileTitle(last_description_task);
 createReadmeFile(MAIN_PATH, README_MAIN);
 createReadmeFile(STEPS_PATH, README_MAIN);
 createReadmeFile(LAST_STEP_PATH, README_STEP);
