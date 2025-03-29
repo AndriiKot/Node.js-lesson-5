@@ -49,21 +49,20 @@ function parseFileTitle(newContent) {
 function cleanText(text) {
   text = text.replace(/<[^>]+>/g, "");
 
+  // let cleanedText = "";
+  // const words = text.split(" ");
+  // let currentLineLength = 0;
+  // for (let i = 0; i < words.length; i++) {
+  //   const word = words[i];
+  //   if (currentLineLength + word.length > 50) {
+  //     cleanedText += "\n";
+  //     currentLineLength = 0;
+  //   }
+  //   cleanedText += word + " ";
+  //   currentLineLength += word.length + 1;
+  // }
 
-  let cleanedText = "";
-  const words = text.split(" ");
-  let currentLineLength = 0;
-  for (let i = 0; i < words.length; i++) {
-    const word = words[i];
-    if (currentLineLength + word.length > 50) {
-      cleanedText += "\n";
-      currentLineLength = 0;
-    }
-    cleanedText += word + " ";
-    currentLineLength += word.length + 1;
-  }
-
-  return cleanedText;
+  return text;
 }
 
 function getNumberStep(folder) {
