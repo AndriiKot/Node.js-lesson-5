@@ -77,7 +77,8 @@ const README_STEP = [
   topic,
   generateDetailsTemplate(
     "Description of the Task",
-    `${getNumberStep(LAST_STEP_FOLDER)}\n\n${readDescriptionTask()}`
+    test
+    // `${getNumberStep(LAST_STEP_FOLDER)}\n\n${readDescriptionTask()}`
   ),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
