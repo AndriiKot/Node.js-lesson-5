@@ -64,7 +64,7 @@ function generateCodesProject() {
 const README_MAIN = [
   top_page,
   topic,
-  // generateDetailsTemplate("Follow Links Steps", table),
+  generateDetailsTemplate("Follow Links Steps", table),
   generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
