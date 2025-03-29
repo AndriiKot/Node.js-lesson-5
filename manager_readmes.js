@@ -49,7 +49,7 @@ function parseFileTitle(newContent) {
 function cleanText(text) {
   text = text.replace(/<[^>]+>/g, "");
 
-  
+
   let cleanedText = "";
   const words = text.split(" ");
   let currentLineLength = 0;
@@ -63,7 +63,7 @@ function cleanText(text) {
     currentLineLength += word.length + 1;
   }
 
-  return cleanedText.trim();
+  return cleanedText;
 }
 
 function getNumberStep(folder) {
