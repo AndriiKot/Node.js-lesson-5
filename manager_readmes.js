@@ -53,9 +53,10 @@ function cleanText(text) {
 
   const regex = /<[^>]+>/g;
   if (!regex.test(text)) {
+    console.error("Text does not contain HTML tags.");
     return text;
   }
-  
+
   text = text.replace(/<[^>]+>/g, "");
 
   let cleanedText = "";
