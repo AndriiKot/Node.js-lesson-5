@@ -48,7 +48,6 @@ function parseFileTitle(newContent) {
 }
 function cleanText(text) {
   text = text.replace(/<[^>]+>/g, "");
-  text = text.replace(/\s*/g, "");
 
   let cleanedText = "";
   const words = text.split(" ");
