@@ -203,8 +203,7 @@ function generateTable(baseURL, links, columns) {
   </thead>
   <tbody>
   </tbody>
-</table>
-`;
+</table>`;
 }
 
 function generateTableLink(files) {
