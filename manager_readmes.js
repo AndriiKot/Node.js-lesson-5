@@ -34,7 +34,7 @@ function readDescriptionTask() {
   let task = fs.readFileSync(path.join(LAST_STEP_PATH, "title.txt"), {
     encoding: "utf8",
   });
-  text = task.replace(' id="description"', "");
+  const text = task.replace(' id="description"', "");
   const regex = /<[^>]+>/g;
 
   if (!regex.test(text)) {
