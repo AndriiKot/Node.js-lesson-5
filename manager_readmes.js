@@ -41,7 +41,7 @@ function readDescriptionTask() {
     return "";
   }
 
-  return text;
+  return text.trim();
 }
 
 function parseFileTitle(newContent) {
@@ -168,7 +168,7 @@ function generateDetailsTemplate(title, content) {
         <h4>${title}</h4>
       </summary>
        ${content}
-      </details>\n\n`;
+</details>\n\n`;
 }
 
 function createTableHeader(baseURL, link, i) {
