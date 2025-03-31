@@ -124,6 +124,7 @@ const README_MAIN = [
 const README_STEP = [
   top_page,
   topic,
+  generateDetailsTemplate("Follow Links Steps", table),
   generateDetailsTemplate(
     "Description of the Task",
     `${getNumberStep(LAST_STEP_FOLDER)}\n\n${last_description_task}`
