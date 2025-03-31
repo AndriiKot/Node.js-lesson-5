@@ -6,27 +6,95 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
-const filePath = path.join("../../", "README.md");
+const folderSteps = "steps";
+const folderImagesPreviews = "images/previews";
+const urlBlod = `/blob/${config.BRANCH}`;
+
+const STEPS = getFolders(folderSteps);
+const LAST_STEP_FOLDER = getLastFolderStep(STEPS);
+const MAIN_PATH = path.join(__dirname, "..", "..");
+const STEPS_PATH = path.join(MAIN_PATH, "steps");
+const LAST_STEP_PATH = path.join(STEPS_PATH, LAST_STEP_FOLDER);
 
 const topic = config.README_TOPIC;
 const top_page = config.top_page;
 const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
-
-const folderSteps = "../../steps";
-const folderImagesPreviews = "../../images/previews";
-const urlTreeBranch = `/tree/${config.BRANCH}`;
-const urlBlod = `/blob/${config.BRANCH}`;
+const last_description_task = readDescriptionTask();
+const title = cleanText(last_description_task);
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
+
+function getLastFolderStep(folders) {
+  return folders.at(-1);
+}
+
+function readDescriptionTask() {
+  let task = fs.readFileSync(path.join(LAST_STEP_PATH, "title.txt"), {
+    encoding: "utf8",
+  });
+  const text = task.replace(' id="description"', "");
+  const regex = /<[^>]+>/g;
+
+  if (!regex.test(text)) {
+    return "";
+  }
+
+  return text.trim();
+}
+
+function parseFileTitle(newContent) {
+  try {
+    fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
+    console.log("File 'title.txt' has been overwritten.");
+  } catch (err) {
+    console.error("Error writing file:", err);
+  }
+}
+function cleanText(text) {
+  if (!text.startsWith("Step")) {
+    text = getNumberStep(LAST_STEP_FOLDER) + "\n" + text;
+  }
+  const regex = /<[^>]+>/g;
+
+  if (!regex.test(text)) {
+    return text;
+  }
+
+  text = text.replace(/<[^>]+>/g, "");
+
+  let cleanedText = "";
+  const words = text.split(" ");
+  let currentLineLength = 0;
+  let wordCount = 0;
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    if (wordCount > 0 && wordCount % 7 === 0) {
+      cleanedText += "\n";
+      currentLineLength = 0;
+    }
+    cleanedText += word + " ";
+    currentLineLength += word.length + 1;
+    wordCount++;
+  }
+
+  return cleanedText;
+}
+
+function getNumberStep(folder) {
+  return `<h3>Step  ${+folder.replace(/\D/g, "")}</h3>`;
+}
 
 function generateCodesProject() {
   const lastStepFolder = getFolders(folderSteps).at(-1);
   const lastStepFiles = getFiles(path.resolve(folderSteps, lastStepFolder));
+  const intersection = lastStepFiles.filter((item) =>
+    config.FILES.includes(item)
+  );
   let stringCodesProject = "";
 
-  lastStepFiles.forEach((file) => {
+  intersection.forEach((file) => {
     const data = fs.readFileSync(
       path.resolve(folderSteps, lastStepFolder, file),
       { encoding: "utf8" }
@@ -42,7 +110,7 @@ function generateCodesProject() {
   return stringCodesProject;
 }
 
-const README_TEMPLATE = [
+const README_MAIN = [
   top_page,
   topic,
   generateDetailsTemplate("Follow Links Steps", table),
@@ -50,15 +118,28 @@ const README_TEMPLATE = [
   back_to_top,
   generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
   back_to_top,
-  // generateTableLink(config.FILES),
   generateCodesProject(),
+];
+
+const README_STEP = [
+  top_page,
+  topic,
+  generateDetailsTemplate("Follow Links Steps", table),
+  generateDetailsTemplate(
+    "Description of the Task",
+    `${getNumberStep(LAST_STEP_FOLDER)}\n\n${last_description_task}`
+  ),
+  generateImagePreview(base_url, 4, getFiles(folderImagesPreviews).at(-1)),
   back_to_top,
+  generateTableTechnologies(config.TECHNOLOGIES, 33, 100, 100, 100),
+  back_to_top,
+  generateCodesProject(),
 ];
 
 function generateImagePreview(base_url, header_level, imageName) {
   const alt = imageName.replace(/\.[^.]*$/g, "");
   const normalizeUrl = new URL(
-    path.join(base_url, urlBlod, folderImagesPreviews, imageName)
+    path.join(base_url, urlBlod, "images/previews", imageName)
   ).toString();
   return `<h${header_level}>preview</h${header_level}>
     <img src="${normalizeUrl}" alt="${alt}">
@@ -87,7 +168,8 @@ function generateDetailsTemplate(title, content) {
       <summary>
         <h4>${title}</h4>
       </summary>
-       ${content}</details>\n`;
+       ${content}
+</details>\n\n`;
 }
 
 function createTableHeader(baseURL, link, i) {
@@ -171,8 +253,7 @@ function generateTable(baseURL, links, columns) {
   </thead>
   <tbody>
   </tbody>
-</table>
-`;
+</table>`;
 }
 
 function generateTableLink(files) {
@@ -190,15 +271,21 @@ function generateTableLink(files) {
   return result;
 }
 
-function createReadmeFile() {
+function createReadmeFile(directoryPath, template) {
   try {
-    fs.writeFileSync(filePath, README_TEMPLATE.join(""), {
+    const readmePath = path.join(directoryPath, "README.md");
+
+    fs.writeFileSync(readmePath, template.join(""), {
       flag: "w",
     });
+
     console.log("README.md file created/updated successfully!");
   } catch (err) {
     console.error("Error creating/updating README.md file:", err);
   }
 }
 
-createReadmeFile();
+parseFileTitle(title);
+createReadmeFile(MAIN_PATH, README_MAIN);
+createReadmeFile(STEPS_PATH, README_MAIN);
+createReadmeFile(LAST_STEP_PATH, README_STEP);
