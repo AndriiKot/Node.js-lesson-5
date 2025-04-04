@@ -6,7 +6,36 @@ const config = require("./config");
 const technologiesDocsLinks = require("./technologies/docs_links.json");
 const technologiesSvg = require("./technologies/technologies_svg.json");
 
+// ParserFreeCodeCamp
+const puppeteer = require("puppeteer");
+
+function writeTitle(newContent) {
+  try {
+    fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
+    console.log("Successfully wrote new content to 'title.txt' file.");
+  } catch (err) {
+    console.error("Error occurred while writing to 'title.txt' file:", err);
+  }
+}
+
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto(
+    "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-form-validation-by-building-a-calorie-counter/step-19"
+  );
+
+  // Get the content of the element with ID "description"
+  const description = await page.$eval(
+    "#description",
+    (element) => element.outerHTML
+  );
+  writeTitle(description);
+
+  await browser.close();
+})();
 const folderSteps = "steps";
+
 const folderImagesPreviews = "images/previews";
 const urlBlod = `/blob/${config.BRANCH}`;
 
@@ -53,6 +82,8 @@ function parseFileTitle(newContent) {
   }
 }
 function cleanText(text) {
+  const regex = /<[^>]+>/g;
+
   if (!regex.test(text)) {
     return text;
   }
@@ -60,7 +91,6 @@ function cleanText(text) {
   if (!text.startsWith("Step")) {
     text = getNumberStep(LAST_STEP_FOLDER) + "\n" + text;
   }
-  const regex = /<[^>]+>/g;
 
   text = text.replace(/<[^>]+>/g, "");
 
