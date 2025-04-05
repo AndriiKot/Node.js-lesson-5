@@ -36,7 +36,10 @@ function writeTitle(newContent) {
     (element) => element.outerHTML
   );
   console.log(description);
+  
   writeTitle(description);
+  const last_description_task = readDescriptionTask();
+  cleanText(last_description_task);
 
   await browser.close();
 })();
@@ -57,8 +60,6 @@ const top_page = config.top_page;
 const back_to_top = config.back_to_top_page;
 const base_url = config.BASE_URL;
 const base_url_technologies = config.BASE_URL_TECHNOLOGIES;
-const last_description_task = readDescriptionTask();
-const title = cleanText(last_description_task);
 
 const table = generateTable(base_url, getFolders(folderSteps), 5);
 
