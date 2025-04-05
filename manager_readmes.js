@@ -25,15 +25,19 @@ function writeTitle(newContent) {
     "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-form-validation-by-building-a-calorie-counter/step-19"
   );
 
+  // Wait for the element to appear
+  await page.waitForSelector("#description", { timeout: 10000 });
+
   // Get the content of the element with ID "description"
   const description = await page.$eval(
     "#description",
-    (element) => element.outerHTML
+    (element) => element.textContent
   );
-  writeTitle(description);
+  console.log(description);
 
   await browser.close();
 })();
+
 const folderSteps = "steps";
 
 const folderImagesPreviews = "images/previews";
