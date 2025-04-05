@@ -11,7 +11,7 @@ const puppeteer = require("puppeteer");
 
 function writeTitle(newContent) {
   try {
-    fs.writeFileSync(path.join("./", "title.txt"), newContent);
+    fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
     console.log("Successfully wrote new content to 'title.txt' file.");
   } catch (err) {
     console.error("Error occurred while writing to 'title.txt' file:", err);
