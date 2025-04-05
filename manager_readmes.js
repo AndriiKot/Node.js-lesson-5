@@ -11,7 +11,9 @@ const puppeteer = require("puppeteer");
 
 function writeTitle(newContent) {
   try {
-    fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent);
+    fs.writeFileSync(path.join(LAST_STEP_PATH, "title.txt"), newContent, {
+      flag: "w",
+    });
     console.log("Successfully wrote new content to 'title.txt' file.");
   } catch (err) {
     console.error("Error occurred while writing to 'title.txt' file:", err);
@@ -31,7 +33,7 @@ function writeTitle(newContent) {
   // Get the content of the element with ID "description"
   const description = await page.$eval(
     "#description",
-    (element) => element.textContent
+    (element) => element.outerHTML
   );
   console.log(description);
   writeTitle(description);
