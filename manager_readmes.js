@@ -34,6 +34,7 @@ function writeTitle(newContent) {
     (element) => element.textContent
   );
   console.log(description);
+  writeTitle(description);
 
   await browser.close();
 })();
